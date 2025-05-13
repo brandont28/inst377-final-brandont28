@@ -1,0 +1,93 @@
+body {
+    background-color: #111111;
+    color:white;
+    font-family: monospace;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+header img{
+    width:auto;
+    height: 80px;
+}
+
+#main-nav {
+    background-color: #292929;
+    text-align: center;
+    padding-right: 30px;
+}
+
+#main-nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+}
+
+#main-nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 20px 40px 20px 40px;
+}
+
+#main-nav li:hover {
+    background-color: #ff4655;
+}
+
+.main-container {
+    margin: 30px;
+}
+
+.main-content {
+    background-color: #292929;
+    border: solid 3px #ff4655;
+    border-radius: 15px;
+    float: left;
+    width: 70%;
+    padding: 15px;
+}
+
+
+
+/*Competitive Tiers Sidebar */
+aside {
+    background-color: #292929;
+    border: solid 3px #ff4655;
+    border-radius: 15px;
+    float: right;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+#ranks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+}
+
+#ranks div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: calc(33.33% - 20px);
+    
+}
+
+#ranks img {
+    width: 35px;
+    padding-right: 5px;
+}
+
+
+
