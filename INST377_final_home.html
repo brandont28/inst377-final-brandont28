@@ -3,6 +3,7 @@
   <head>
     <title>Final</title>
     <link rel="stylesheet" href="INST377_final_css.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
     <script src="INST377_final_js.js"></script>
   </head>
   <body>
@@ -27,17 +28,24 @@
     <!--Main Body Content-->
     <div class="main-container">
       <div class="main-content">
-        <h1>Hello</h1>
+        <div data-simple-slider id="agentSlides"></div>
+        <div id="slideControls">
+          <button class="customBut" id="previousAgent">Previous Agent</button>
+          <button class="customBut" id="nextAgent">Next Agent</button>
+        </div>
       </div>
 
       <!--Sidebar-->
-      <aside id="weapons">
-        <h1>Top Weapons</h1>
-      </aside>
-      <aside id="compTiers">
-        <h1>Competitive Tiers</h1>
-        <div id="ranks"></div>
-      </aside>
+      <div class="sidebar-container">
+        <aside id="topWeapons">
+          <h1>Top Weapons</h1>
+          <div id="weapons"></div>
+        </aside>
+        <aside id="compTiers">
+          <h1>Competitive Ranks</h1>
+          <div id="ranks"></div>
+        </aside>
+      </div>
     </div>
   </body>
 </html>

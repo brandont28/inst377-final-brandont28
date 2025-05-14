@@ -16,6 +16,7 @@ header img{
     height: 80px;
 }
 
+/*Navigation Bar*/
 #main-nav {
     background-color: #292929;
     text-align: center;
@@ -41,6 +42,7 @@ header img{
     background-color: #ff4655;
 }
 
+/*Main Container and Content*/
 .main-container {
     margin: 30px;
 }
@@ -54,20 +56,107 @@ header img{
     padding: 15px;
 }
 
+/*Agent Slides*/
+#agentSlides {
+    display: flex;
+    overflow: hidden;
+}
 
+[data-simple-slider] {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
 
-/*Competitive Tiers Sidebar */
+[data-simple-slider] div {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+  
+}
+
+[data-simple-slider] img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#slideControls {
+    margin-top: 50px;
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+.customBut {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #ff4655;
+  background-image: linear-gradient(45deg, #ff4655 0%, #f05d19  51%, #ff4655  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.customBut:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.customBut:active {
+  transform: scale(0.95);
+}
+
+/*Sidebar content including weapons and competitive tiers*/
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    float: right;
+    margin-right: 30px;
+}
+
 aside {
     background-color: #292929;
     border: solid 3px #ff4655;
     border-radius: 15px;
-    float: right;
-    width: 25%;
+    width: 100%;
     text-align: center;
     margin-bottom: 10px;
     padding: 15px;
 }
 
+/*Top Weapons Sidebar*/
+#weapons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:40px;
+}
+
+#weapons div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#weapons img {
+    width: 400px;
+}
+
+/*Competitive Tiers Sidebar*/
 #ranks {
     display: flex;
     flex-wrap: wrap;
