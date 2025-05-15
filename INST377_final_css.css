@@ -42,33 +42,22 @@ header img{
     background-color: #ff4655;
 }
 
-/*Main Container and Content*/
+/*Main Container*/
 .main-container {
     margin: 30px;
-}
-
-.main-content {
-    background-color: #292929;
-    border: solid 3px #ff4655;
-    border-radius: 15px;
     float: left;
-    width: 70%;
-    padding: 15px;
+    width: 65%;
+    gap: 10px;
 }
 
-/*Agent Slides*/
-#agentSlides {
-    display: flex;
-    overflow: hidden;
-}
-
+/*Universal Slides Styling*/
 [data-simple-slider] {
-  width: 600px;
-  height: 600px;
   margin: auto;
+  display: flex;
+  overflow: hidden;
 }
 
-[data-simple-slider] div {
+[data-simple-slider] > div {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -82,12 +71,51 @@ header img{
   object-fit: cover;
 }
 
-#slideControls {
-    margin-top: 50px;
-    margin-bottom: 75px;
+/*Agent Slides*/
+.agent-content {
+    background-color: #292929;
+    border: solid 3px #ff4655;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#agentSlides {
+    width: 500px;
+    height: 500px;
+}
+
+#agentControls {
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
+/*Map Slides */
+.maps-content {
+    background-color: #292929;
+    border: solid 3px #ff4655;
+    border-radius: 15px;
+    width: 100%;
+    padding: 15px;
+}
+
+#mapSlides {
+    width: 800px;
+    height: 400px;
+}
+
+
+#mapControls {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*Button Customization*/
 .customBut {
   margin: 10px;
   padding: 15px 30px;
@@ -123,7 +151,7 @@ header img{
     flex-direction: column;
     width: 25%;
     float: right;
-    margin-right: 30px;
+    margin: 30px;
 }
 
 aside {
@@ -142,6 +170,7 @@ aside {
     flex-direction: column;
     align-items: center;
     gap:40px;
+    padding: 10px;
 }
 
 #weapons div {
@@ -162,6 +191,7 @@ aside {
     flex-wrap: wrap;
     justify-content: center;
     gap:20px;
+    padding: 10px;
 }
 
 #ranks div {

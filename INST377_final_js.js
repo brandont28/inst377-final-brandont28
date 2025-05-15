@@ -20,8 +20,9 @@ function getAgents () {
                 agentSlides.appendChild(div);
             });
 
-            const slider = simpleslider.getSlider({
-                delay: 10
+            const slider = simpleslider.getSlider( {
+                container: agentSlides,
+                delay: 4
             });
 
             document.getElementById('previousAgent').addEventListener('click', () => {
@@ -34,7 +35,41 @@ function getAgents () {
         });
 }
 
+//Fetches Maps
+function getMaps () {
+    fetch(`https://valorant-api.com/v1/maps`)
+        .then((resp) => resp.json())
+        .then((data) => {
+            const maps = data.data;
+            
+            const mapSlides = document.getElementById('mapSlides');
+            console.log(maps);
 
+            maps.forEach(map => {
+                const div = document.createElement("div");
+                const img = document.createElement("img");
+                const name = document.createElement("h2");
+                name.textContent = map.displayName;
+                img.src = map.splash;
+                div.appendChild(name);
+                div.appendChild(img);
+                mapSlides.appendChild(div);
+            });
+
+            const slider = simpleslider.getSlider({
+                container: mapSlides,
+                delay: 6
+            });
+
+            document.getElementById('previousMap').addEventListener('click', () => {
+                slider.prev();
+            });
+
+            document.getElementById('nextMap').addEventListener('click', () => {
+                slider.next();
+            });
+        });
+}
 
 //Fetch Weapons
 function getTopWeapons () {
@@ -99,6 +134,7 @@ function getRanks () {
 
 window.onload = function(){
     getAgents();
+    getMaps();
     getTopWeapons();
     getRanks();
 }
