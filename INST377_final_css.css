@@ -42,12 +42,14 @@ header img{
     background-color: #ff4655;
 }
 
+/*HOME PAGE*/
+
 /*Main Container*/
 .main-container {
-    margin: 30px;
     float: left;
     width: 65%;
-    gap: 10px;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 /*Universal Slides Styling*/
@@ -147,11 +149,10 @@ header img{
 
 /*Sidebar content including weapons and competitive tiers*/
 .sidebar-container {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
+    width: 27%;
     float: right;
-    margin: 30px;
+    margin-top: 30px;
+    margin-right: 60px;
 }
 
 aside {
@@ -208,5 +209,30 @@ aside {
     padding-right: 5px;
 }
 
+/*ABOUT ME*/
+.projectExplanation {
+    background-color: #292929;
+    border: solid 3px #ff4655;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
 
+.projectExplanation h1 {
+    font-size: 30px;
+}
 
+.projectExplanation p {
+    font-size: 20px;
+}
+
+#aboutMe h1 {
+    font-size: 30px;
+}
+
+#aboutMe p {
+    font-size: 20px;
+}

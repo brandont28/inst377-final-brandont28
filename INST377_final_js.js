@@ -41,11 +41,12 @@ function getMaps () {
         .then((resp) => resp.json())
         .then((data) => {
             const maps = data.data;
-            
+            //Filters out maps that are unused in traditional gameplay (A/B or A/B/C bomb site maps only)
+            const filteredMaps = maps.filter(map => map.tacticalDescription);
             const mapSlides = document.getElementById('mapSlides');
-            console.log(maps);
+            console.log(filteredMaps);
 
-            maps.forEach(map => {
+            filteredMaps.forEach(map => {
                 const div = document.createElement("div");
                 const img = document.createElement("img");
                 const name = document.createElement("h2");
